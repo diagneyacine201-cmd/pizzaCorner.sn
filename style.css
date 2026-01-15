@@ -1,0 +1,487 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(255, 98, 0) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(235, 151, 61) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    color: rgb(255, 98, 0);
+}
+/* === CORRECTION DU PANIER SEULEMENT === */
+
+/* Container du panier */
+.en_tête1 {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espace entre connexion et panier */
+}
+
+/* Conteneur icône + texte panier */
+
+
+/* Icône du panier */
+.fafa {
+    font-size: 1.3em;
+    color: #fa8a2f;
+    transition: transform 0.3s;
+}
+
+.panier:hover .fafa {
+    transform: scale(1.1);
+}
+
+/* Texte "Panier" */
+.panier .menu1 {
+    color: rgb(235, 151, 61);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap; /* Évite le retour à la ligne */
+}
+
+
+
+/* Animation pour le badge quand un produit est ajouté */
+@keyframes badgePop {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.panier-badge.added {
+    animation: badgePop 0.3s ease-out;
+}
+
+/* Pour aligner avec Bootstrap si nécessaire */
+.navbar-nav .menu1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .en_tête1 {
+        gap: 15px; /* Réduire l'espace sur mobile */
+    }
+    
+    .panier {
+        gap: 5px;
+        padding: 5px 8px;
+    }
+    
+    .panier-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 0.6rem;
+        top: -4px;
+        right: -4px;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('images/img6.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    background-color: rgba(255, 98, 0, 0.4);
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    background-color: rgba(255, 98, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    color: white;
+    font-family: cursive;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    color: beige;
+    font-size: 1.2rem;
+}
+
+/* Carousel */
+.carousel{
+            margin: 0 auto;
+            position: relative;
+            bottom: 30%;
+            padding: 100px 0;
+            max-width: 1000px;
+            overflow: hidden; /*Cache tout ce qui dépasse de l’élément (contenu ou enfants).Masquer un élément qui sort d’un cadre*/
+            display: flex;
+            
+        }
+        .card{
+            width: 100%;
+            color: rgb(255, 255, 255);
+            border-radius: 24px ;
+            border: 6px solid rgb(244, 143, 2);
+            box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+            padding: 20px;
+            font-size: xx-large;
+            justify-content: center; /*aligne vertical*/
+            align-items: center; /*aligne vertical*/
+            min-height: 250px;
+            min-width: 200px;
+            cursor: pointer;
+            &:nth-child(1){
+                background: url(images/img1.jpg);
+                background-position: center;
+                background-size: cover; 
+            }
+                
+             &:nth-child(2){
+                background: #5d34f2;
+            background: url(images/img8.png);
+                background-position: center;
+                background-size: contain;
+            color: #f3be8c;;
+            font-weight: 700;
+        }
+             &:nth-child(3){
+                background: #4300da;
+                background: url(images/img4.png);
+                background-position: center;
+                background-size: contain;
+                color: #ff7b00;
+                font-weight: 700;
+            }
+        }
+        .carousel{
+            > * {
+                flex: 0 0 100%;
+            }
+            
+        }
+        .group{
+            display: flex;
+            gap: 20px;
+            padding-right: 20px;
+            will-change: transform;
+            animation: scrolling 10s linear infinite;
+        }
+        @keyframes scrolling{
+            0% {
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        .carousel{
+            &:hover .group {
+                animation-play-state: paused;
+            }
+        }
+/* Team Section */
+.team-section {
+    background-color: #fff6f1;
+    border-top: 2px solid #f3a240;
+    border-bottom: 2px solid #f3a240;
+}
+
+.team-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-images img {
+    max-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-content h2 {
+    color: #f3a240;
+    margin-bottom: 20px;
+}
+
+.team-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Flavors Section */
+.flavor-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ff9a3d;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.flavor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.flavor-card img {
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.flavor-card h3 {
+    color: #f3a240;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    min-height: 60px;
+}
+
+.rating {
+    color: #f3a240;
+    margin: 10px 0;
+}
+
+.price {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Why Choose Us */
+.why-section {
+    background-color: #fff9f5;
+}
+
+.feature-card {
+    background-color: #fff6f1;
+    border: 1px solid rgb(238, 114, 5);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px rgba(255, 184, 140, 0.3);
+}
+
+.feature-card h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(221, 126, 48);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    max-height: 80px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff6f1;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff6f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .carousel-card {
+        min-height: 200px;
+    }
+    
+    .carousel-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .team-images img {
+        max-width: 150px;
+    }
+    
+    .flavor-card h3 {
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    .hero-content {
+        padding: 20px;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
+    
+    .team-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-icons {
+        margin-top: 20px;
+    }
+}
+
+/* Utilitaires */
+.section-title {
+    color: #fa8a2f;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+/* Dans style.css */
+/* === CORRECTION UNIFIÉE DU BADGE === */
+
+/* Container du panier - IMPORTANT */
+.panier {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative; /* ABSOLUMENT NÉCESSAIRE */
+}
+
+/* Badge du panier - CORRECTION */
+.panier-badge {
+    position: absolute;
+    top: -8px;  /* Ajustez selon vos besoins */
+    right: -8px; /* Ajustez selon vos besoins */
+    background-color: #ff4444;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex !important; /* !important pour forcer */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* Cache le badge quand il est à 0 */
+.panier-badge[data-count="0"] {
+    display: none !important;
+}
+
+/* Animation quand on ajoute */
+@keyframes badgePop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.badge-pop {
+    animation: badgePop 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+

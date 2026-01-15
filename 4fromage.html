@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Fromages - Pizza Corner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produit.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/img5.png" alt="Pizza Corner Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Boutique</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Connexion</a></li>
+                        <li class="nav-item">
+                            <div class="en_tête1">
+    <div class="panier my-1">
+        <i class="fafa fa-solid fa-bag-shopping"></i>
+        <a class="menu1 my-1" href="/page_principale/panier.html">Panier</a>
+        <span class="panier-badge">0</span>
+    </div>
+</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Produit -->
+    <section class="produit-section">
+        <div class="container">
+            <div class="row produit-container">
+                <!-- Image du produit -->
+                <div class="col-lg-6">
+                    <div class="produit-image-container">
+                        <img src="images/img7.png" alt="Pizza 4 Fromages" class="produit-image">
+                    </div>
+                </div>
+                
+                <!-- Informations du produit -->
+                <div class="col-lg-6">
+                    <div class="produit-info">
+                        <h1 class="produit-title">CORNER-PIZZA 4 Fromages</h1>
+                        
+                        <div class="rating mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ms-2">(4.9/5)</span>
+                        </div>
+                        
+                        <p class="produit-price">1800fr</p>
+                        
+                        <p class="produit-description">
+                            Découvrez notre délicieuse pizza en cornet aux 4 fromages ! 
+                            Une base de tortilla croustillante garnie d'un mélange savoureux 
+                            de mozzarella, gorgonzola, parmesan et chèvre. Un véritable 
+                            délice pour les amateurs de fromage.
+                        </p>
+                        
+                        <h3 class="ingredients-title">Ingrédients :</h3>
+                        <ul class="ingredients-list">
+                            <li><i class="fas fa-cheese me-2"></i> Mozzarella fondante</li>
+                            <li><i class="fas fa-cheese me-2"></i> Gorgonzola crémeux</li>
+                            <li><i class="fas fa-cheese me-2"></i> Parmesan italien</li>
+                            <li><i class="fas fa-cheese me-2"></i> Chèvre frais</li>
+                            <li><i class="fas fa-bread-slice me-2"></i> Tortilla maison</li>
+                            <li><i class="fas fa-leaf me-2"></i> Basilic frais</li>
+                            <li><i class="fas fa-pepper-hot me-2"></i> Sauce tomate spéciale</li>
+                        </ul>
+                        
+                        <!-- Sélecteur de quantité -->
+                        <div class="quantity-selector">
+                            <label for="quantity" class="fw-bold">Quantité :</label>
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        
+                        <!-- Boutons d'action -->
+                        <div class="actions-buttons">
+                            <button class="btn-ajouter">
+                                <i class="fas fa-cart-plus me-2"></i> Ajouter au panier
+                            </button>
+                            <button class="btn-acheter">
+                                <i class="fas fa-bolt me-2"></i> Commander maintenant
+                            </button>
+                        </div>
+                        
+                        <!-- Informations supplémentaires -->
+                        <div class="additional-info mt-4">
+                            <p><i class="fas fa-clock me-2"></i> <strong>Préparation :</strong> 10-15 minutes</p>
+                            <p><i class="fas fa-fire me-2"></i> <strong>Calories :</strong> Environ 450 kcal</p>
+                            <p><i class="fas fa-seedling me-2"></i> <strong>Option végétarienne :</strong> Oui</p>
+                        </div>
+                        
+                        <!-- Lien retour -->
+                        <a href="/page_principale/index.html" class="back-link">
+                            <i class="fas fa-arrow-left me-2"></i> Retour à l'accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="images/img5.png" alt="Logo" class="footer-logo">
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <ul class="footer-links">
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Publicité</a></li>
+                        <li><a href="#">Recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   </body>
+</html>
